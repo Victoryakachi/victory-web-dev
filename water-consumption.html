@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Consumption</title>
+    <link rel="stylesheet" href="water-consumption.css">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <p class="eyebrow">Water system</p>
+            <h1>Water Consumption</h1>
+        </div>
+
+        <div class="tank-scene" aria-label="Animated transparent tank showing water level">
+            <div class="tank" role="img" aria-label="Transparent water tank">
+                <div id="tank-fill" class="tank-fill" aria-hidden="true"></div>
+                <div id="tank-label" class="tank-label">100%</div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Capacity</span>
+                <span class="stat-value">100 L</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Remaining</span>
+                <span id="water-amount" class="stat-value">100 L</span>
+            </div>
+        </div>
+
+        <label for="water-level">Water remaining:</label>
+        <progress id="water-level" value="100" max="100"></progress>
+
+        <div class="button-row">
+            <button id="run-button" type="button">Run simulation</button>
+            <button id="reset-button" type="button" class="secondary">Reset tank</button>
+        </div>
+
+        <p id="output" class="output">Press the button to start.</p>
+    </main>
+
+    <script src="water-consumption.js"></script>
+</body>
+</html>

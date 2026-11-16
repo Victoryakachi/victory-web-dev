@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="formm.css">
+</head>
+<body>
+  <div class="Box">
+    <form class="Box1">
+      <h1 class="Box1a">Contact Us</h1>
+      <div class="Box1b">
+            <div class="Box1c">
+                <label for="firstName" class="Box1d">First Name <span class="Box1e">*</span></label>
+                 <input type="text" id="firstName" name="firstName" class="Box1f" required>
+            </div>
+            <div class="Box1c">
+                <label for="lastName" class="Box1d">Last Name <span class="Box1e">*</span></label>
+                <input type="text" id="lastName" name="lastName" class="Box1f" required>
+            </div>
+        </div>
+      <div class="Box1c">
+            <label for="email" class="Box1d">Email Address <span class="Box1e">*</span></label>
+            <input type="email" id="email" name="email" class="Box1f" required>
+      </div>
+      <div class="Box1c">
+            <p class="Box1d">Query Type <span class="Box1e">*</span></p>
+            <div class="Box1g">
+                <label class="Box1h">
+                <input type="radio" name="queryType" value="general" class="Box1i" required>
+                <span class="Box1j">General Enquiry</span>
+                </label>
+          <label class="Box1h">
+            <input type="radio" name="queryType" value="support" class="Box1i" required>
+            <span class="Box1j">Support Request</span>
+          </label>
+        </div>
+      </div>
+      <div class="Box1c">
+        <label for="message" class="Box1d">Message <span class="Box1e">*</span></label>
+        <textarea id="message" name="message" rows="4" class="Box1k" required></textarea>
+      </div>
+      <div class="Box1c Box1l">
+        <label class="Box1m">
+          <input type="checkbox" name="consent" class="Box1n" required>
+          <span class="Box1o">I consent to being contacted by the team <span class="Box1e">*</span></span>
+        </label>
+      </div>
+      <button type="submit" class="Box1p">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* COUNTER PROGRAM
+body {
+    background-color: violet;
+}
+#countLabel {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: helvetica;
+}
+#btnContainer{
+    text-align: center;
+}
+.buttons{
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.buttons:hover {
+    background-color: #3d7040;
+} */ 
+
+/* For math */
+/* body{
+    font-family: verdana;
+    text-align: center;
+}
+#myButton{
+    font-size: 4em;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+#Label1, #Label2{
+    font-size: 3em;
+} */
+
+/* IF STATEMENTS */
+
+/* Checked Property */
+/* #mySubmit{
+    font-size: 1em;
+} */

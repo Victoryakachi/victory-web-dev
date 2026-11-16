@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: grid;
+    place-items: center;
+    background-color: gray;
+    font-family: Arial;
+}
+.game {
+    width: 70%;
+    height: 450px;
+    background-color: rgb(99, 53, 133);
+    border: 5px solid black;
+    margin: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.title {
+    background-color: black;
+}
+span{
+    text-transform: uppercase;
+    color: white;
+    padding: 15px;
+    display: grid;
+    place-items: center;
+}
+.ball {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(65, 13, 13);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    /* animation: changecolor 2s ease 0.5s infinite; */
+    animation: move 5s ease infinite;
+}
+
+@keyframes move {
+    0% {
+        left: 50px;
+        bottom: 40px;
+    }
+    20% {
+        left: 180px;
+        bottom: 180px;
+    }
+    40% {
+        left: 330px;
+        bottom: 140px;
+    }
+    60% {
+        left: 450px;
+        bottom: 350px;
+    }
+    80% {
+        left: 750px;
+        bottom: 110px;
+    }
+    100% {
+        left: 650px;
+        bottom: 40px;
+    }
+}
+.platform1 {
+    width: 150px;
+    height: 20px;
+    background-color: brown;
+    position: absolute;
+    left: 250px;
+    bottom: 120px;
+}
+.platform2 {
+    width: 120px;
+    height: 20px;
+    background-color: brown;
+    position: absolute;
+    right: 380px;
+    bottom: 370px;
+}
+.platform3 {
+    width: 120px;
+    height: 20px;
+    background-color: brown;
+    position: absolute;
+    right: 43px;
+    bottom: 90px;
+}
+.omo{
+    color: white;
+    display: grid;
+    place-items: center;
+}
+.ground {
+    width: 100%;
+    height: 40px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+}
+.spike {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid red;
+    position: absolute;
+    bottom: 40px;
+    left: 630px;
+}
+.spike2 {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid red;
+    position: absolute;
+    bottom: 40px;
+    left: 670px;
+}

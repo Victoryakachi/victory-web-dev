@@ -1,0 +1,29 @@
+*{
+    margin: o;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 60vw;
+    background-color: hsl(216, 50%, 16%);
+    padding: 24px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box1 img{
+    height: 50vh;
+    display: flex;
+   
+}

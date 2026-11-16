@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid-container{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-items{
+    background-color: grey;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: aliceblue;
+    text-transform: capitalize;
+    font-size: 100px;
+}
+.grid-items:nth-child(1){
+    grid-area: 1/1/2/3 ;
+}
+.grid-items:nth-child(2){
+    grid-area: 1/3/3/4 ;
+}

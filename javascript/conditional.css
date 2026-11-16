@@ -1,0 +1,12 @@
+#airtime{
+    padding: 14px;
+    width: 200px;
+}
+#btnBuy{
+    padding: 5px 20px;
+    background-color: blueviolet;
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}

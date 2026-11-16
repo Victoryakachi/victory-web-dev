@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Box {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: hsl(148, 38%, 91%);
+  color: hsl(187, 24%, 22%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+.Box1 {
+  background: hsl(0, 0%, 100%);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 690px;
+}
+.Box1a {
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(187, 24%, 22%);
+  margin-bottom: 32px;
+}
+.Box1b {
+  display: flex;
+  gap: 16px;
+}
+.Box1c {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 24px;
+}
+.Box1d {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: hsl(187, 24%, 22%);
+}
+.Box1e {
+  color: hsl(169, 82%, 27%);
+}
+.Box1f,
+.Box1k {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: hsl(187, 24%, 22%);
+  outline: none;
+}
+.Box1f:focus,
+.Box1k:focus {
+  border-color: hsl(169, 82%, 27%);
+}
+.Box1g {
+  display: flex;
+  gap: 16px;
+}
+.Box1h {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.Box1i {
+  accent-color: hsl(169, 82%, 27%);
+}
+.Box1j {
+  font-size: 16px;
+}
+.Box1l {
+  margin-bottom: 32px;
+}
+.Box1m {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.Box1n {
+  accent-color: hsl(169, 82%, 27%);
+  width: 18px;
+  height: 18px;
+}
+.Box1p {
+  background: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.Box1p:hover {
+  background: hsl(187, 24%, 22%);
+}

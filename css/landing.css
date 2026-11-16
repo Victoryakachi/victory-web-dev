@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: hsl(0, 0%, 98%);
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    color: hsl(0, 0%, 8%);
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+.nav-left{
+    display: grid;
+    grid-template-columns: repeat(2, 0.1fr);
+    gap: 20px;
+}
+.logo{
+    font-size: 30px;
+}
+.arrow{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 10px;
+    text-transform: capitalize;
+    color: hsl(0, 0%, 41%);
+}
+.arrow p{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
+.arrow img{
+    display: grid;
+    margin-top: 10px;
+}
+.nav-right{
+    display: grid;
+    grid-template-columns: repeat(2, 0.1fr);
+    padding-top: 10px;
+    gap: 25px;
+    color: hsl(0, 0%, 41%);
+    text-transform: capitalize;
+}
+button{
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 41%);
+    margin-top: -5px;
+    padding: 7px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: hsl(0, 0%, 41%);
+}
+.two-sides{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    padding: 50px 100px;
+    gap: 20px;
+    /* border: 1px solid black; */
+    gap: 10px;
+}
+.rhs img{
+    width: 35vw;
+    height: 500px;
+}
+.lhs{
+    margin-top: 30px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+span{
+    text-transform: capitalize;
+}
+.first{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-size-adjust: 2px;
+}
+.second{
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+.btn {
+    background-color: black;
+    color: hsl(0, 0%, 98%);
+    text-transform: none;
+    margin-bottom: 62px;
+    height: 50%;
+    width: 120px;
+    font-weight: bold;
+}
+.client{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 15px; */
+}
+.client img{
+    width: 80px;
+}

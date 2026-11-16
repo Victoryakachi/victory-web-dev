@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Whot! — Nigerian Card Game</title>
+  <style>
+    :root { --ink:#17201b; --cream:#fff8e8; --red:#e24b3c; --gold:#f3bd3d; --green:#236a4b; --leaf:#397b54; --blue:#386f9e; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, sans-serif; background:#194931 radial-gradient(circle at 22% 18%,#367a51 0 2px,transparent 2px) 0 0/18px 18px; }
+    button { font:inherit; cursor:pointer; }
+    .game { width:min(1120px, calc(100% - 28px)); margin:auto; min-height:100vh; padding:22px 0 28px; display:grid; grid-template-rows:auto auto 1fr auto; gap:17px; }
+    header { display:flex; justify-content:space-between; align-items:center; color:var(--cream); }
+    .brand { font-family:Georgia,serif; font-size:2rem; font-weight:900; letter-spacing:-2px; } .brand span { color:var(--gold); }
+    .rules-btn,.new-game { border:0; border-radius:999px; padding:10px 15px; background:rgba(255,255,255,.15); color:white; font-weight:700; }
+    .status { background:var(--cream); padding:13px 20px; border-radius:15px; box-shadow:0 6px 0 rgba(0,0,0,.18); display:flex; align-items:center; justify-content:space-between; gap:10px; font-weight:750; }
+    .turn-dot { width:10px; height:10px; background:#ffb52d; display:inline-block; border-radius:50%; margin-right:8px; box-shadow:0 0 0 4px #ffe6a9; }
+    .table { min-height:390px; position:relative; overflow:hidden; border:5px solid rgba(255,255,255,.18); border-radius:28px; background:linear-gradient(145deg,#236c49,#15543a); box-shadow:inset 0 0 70px rgba(0,0,0,.25),0 10px 25px rgba(0,0,0,.18); display:grid; place-items:center; }
+    .table:before { content:"WHOT!"; position:absolute; color:rgba(255,255,255,.055); font:900 9rem Georgia,serif; transform:rotate(-13deg); }
+    .opponent { position:absolute; top:20px; text-align:center; color:white; font-weight:800; z-index:1; }.opponent small{font-weight:500;opacity:.8}
+    .opponent-cards { display:flex; margin-bottom:8px; justify-content:center; }.mini-card { width:31px; height:46px; margin-left:-14px; border:2px solid #f3bd3d; border-radius:5px; background:#d94638 repeating-linear-gradient(45deg,transparent 0 5px,rgba(255,255,255,.15) 5px 8px); }
+    .center { z-index:1; display:flex; align-items:center; gap:28px; margin-top:26px; }.pile { text-align:center; color:#e5ffea; font-weight:700; font-size:.8rem; }.pile button { border:0; background:transparent; padding:0; }.draw-card,.card { width:114px; height:162px; border-radius:12px; box-shadow:0 7px 11px rgba(0,0,0,.3); }.draw-card { display:grid; place-items:center; color:#ffeab1; border:4px solid #f2c54a; background:#d94b3b repeating-linear-gradient(45deg,transparent 0 8px,rgba(255,255,255,.13) 8px 11px); font:900 1.5rem Georgia,serif; }.draw-card:hover { transform:translateY(-4px); }
+    .card { background:var(--cream); border:4px solid #f3ead4; position:relative; display:grid; place-items:center; overflow:hidden; transition:transform .18s, box-shadow .18s; }.card .num { position:absolute; top:7px; left:9px; font:bold 1.25rem Georgia,serif; }.card .num.bottom { top:auto; left:auto; right:9px; bottom:7px; transform:rotate(180deg); }.symbol { width:60px; height:60px; display:grid; place-items:center; font-size:3.5rem; line-height:1; }.circle{color:var(--red)} .triangle{color:var(--blue)} .cross{color:var(--green)} .star{color:var(--gold)} .whot-symbol {font:bold 2.5rem Georgia,serif;color:var(--red); transform:rotate(-9deg)}
+    .hand-wrap { color:white; text-align:center; }.hand-title { margin:0 0 5px; font-weight:800; }.hand { min-height:166px; display:flex; justify-content:center; align-items:end; padding:0 12px; overflow-x:auto; }.hand .card { flex:0 0 98px; height:142px; margin:0 -5px; cursor:pointer; }.hand .card:hover { transform:translateY(-18px); box-shadow:0 14px 18px rgba(0,0,0,.34); }.hand .card.playable { outline:3px solid #ffe47b; }.hand .card .symbol{font-size:3rem}.hand .card .num{font-size:1.1rem}
+    .modal { position:fixed; inset:0; display:grid; place-items:center; background:rgba(5,22,14,.67); padding:20px; z-index:9; }.modal[hidden]{display:none}.modal-card { background:var(--cream); border-radius:20px; width:min(430px,100%); padding:28px; text-align:center; box-shadow:0 18px 60px #0008; }.modal-card h2{margin:0 0 8px;font-family:Georgia,serif}.modal-card p{line-height:1.5}.shapes{display:flex;justify-content:center;gap:10px;margin-top:20px}.shape-choice{width:70px;height:70px;border:0;border-radius:14px;background:white;font-size:2.2rem;box-shadow:0 3px 0 #ddd}.close{margin-top:18px;border:0;border-radius:9px;padding:10px 14px;background:var(--green);color:white;font-weight:800}.toast { position:absolute; bottom:20px; background:#102b1d; color:white; border-radius:999px; padding:10px 16px; opacity:0; transform:translateY(8px); transition:.25s; z-index:2; }.toast.show{opacity:1;transform:none}
+    @media(max-width:620px){.game{width:min(100% - 18px,600px)}.status{font-size:.9rem}.center{gap:14px}.draw-card,.card{width:94px;height:136px}.table{min-height:355px}.hand .card{flex-basis:80px;height:118px}.brand{font-size:1.7rem}.shape-choice{width:56px;height:56px}}
+  </style>
+</head>
+<body>
+  <main class="game">
+    <header><div class="brand">WH<span>O</span>T!</div><button class="rules-btn" id="rulesBtn">How to play</button></header>
+    <section class="status"><span id="status"><i class="turn-dot"></i>Your turn — play a matching card</span><button class="new-game" id="newGame">New game</button></section>
+    <section class="table">
+      <div class="opponent"><div class="opponent-cards" id="opponentCards"></div><div>Amaka <small id="opponentCount">(7 cards)</small></div></div>
+      <div class="center"><div class="pile"><button id="drawPile" aria-label="Draw a card"><div class="draw-card">WHOT!</div></button><p>Market</p></div><div class="pile"><div id="discardPile"></div><p>Last card</p></div></div>
+      <div class="toast" id="toast"></div>
+    </section>
+    <section class="hand-wrap"><p class="hand-title">YOUR HAND <span id="handCount"></span></p><div class="hand" id="hand"></div></section>
+  </main>
+  <div class="modal" id="modal" hidden><div class="modal-card" id="modalContent"></div></div>
+  <script>
+    const suits = { circle:['●','circle'], triangle:['▲','triangle'], cross:['✚','cross'], star:['★','star'] };
+    const special = { 1:'Hold on!', 2:'Pick two!', 5:'Pick three!', 8:'Suspension!', 14:'General market!' };
+    let deck=[], player=[], opponent=[], discard=[], turn='player', chosenSuit=null, locked=false;
+    const $=s=>document.querySelector(s), status=$('#status'), toast=$('#toast');
+    function makeDeck(){ const d=[]; for(const suit of Object.keys(suits)) for(let n=1;n<=14;n++) d.push({suit,n}); for(let i=0;i<5;i++)d.push({suit:'whot',n:20}); return shuffle(d); }
+    function shuffle(a){return a.sort(()=>Math.random()-.5)}
+    function draw(hand,n=1){ for(let i=0;i<n;i++){ if(!deck.length) deck=shuffle(discard.splice(0,discard.length-1)); if(deck.length) hand.push(deck.pop()); } }
+    function symbol(card){ return card.suit==='whot'?'WHOT!':suits[card.suit][0]; }
+    function cardHTML(c, playable=false){ const cls=c.suit==='whot'?'whot-symbol':suits[c.suit][1]; return `<button class="card ${playable?'playable':''}" data-id="${c.id}"><b class="num">${c.n===20?'':c.n}</b><span class="symbol ${cls}">${symbol(c)}</span><b class="num bottom">${c.n===20?'':c.n}</b></button>`; }
+    function canPlay(c){ const top=discard.at(-1); return c.suit==='whot'||c.suit===(chosenSuit||top.suit)||c.n===top.n; }
+    function render(){ const top=discard.at(-1); $('#discardPile').innerHTML=cardHTML(top); $('#hand').innerHTML=player.map(c=>cardHTML(c,turn==='player'&&canPlay(c))).join(''); $('#handCount').textContent=`(${player.length} cards)`; $('#opponentCount').textContent=`(${opponent.length} cards)`; $('#opponentCards').innerHTML=Array.from({length:Math.min(opponent.length,9)},()=>'<i class="mini-card"></i>').join(''); }
+    function say(text){toast.textContent=text;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1700)}
+    function setStatus(text, yours=false){status.innerHTML=`${yours?'<i class="turn-dot"></i>':''}${text}`}
+    function newGame(){ deck=makeDeck(); deck.forEach((c,i)=>c.id=i); player=[];opponent=[];discard=[];chosenSuit=null;locked=false;draw(player,7);draw(opponent,7);let first=deck.pop();while(first.suit==='whot'||[1,2,5,8,14].includes(first.n)){deck.unshift(first);deck=shuffle(deck);first=deck.pop()}discard.push(first);turn='player';setStatus('Your turn — play a matching card',true);render(); }
+    function winner(hand,name){ if(!hand.length){ locked=true; setStatus(`${name} wins this round!`); showModal(`<h2>${name} wins! 🎉</h2><p>${name==='You'?'Sharp play!':'Amaka got rid of every card first.'} Start another round when you’re ready.</p><button class="close" onclick="closeModal();newGame()">Play again</button>`); return true;} return false; }
+    function effects(card, who){ if(card.suit==='whot')return; if(card.n===1){ say('Hold on — play again!'); return who; } if(card.n===2||card.n===5){const n=card.n===2?2:3;const target=who==='player'?opponent:player;draw(target,n);say(`${special[card.n]} ${who==='player'?'Amaka':'You'} picked ${n}.`);return who;} if(card.n===8){say('Suspension! Turn skipped.');return who;} if(card.n===14){draw(player,1);draw(opponent,1);say('General market — everybody picks one!');} return who==='player'?'opponent':'player'; }
+    function play(card, who){ if(locked)return; const hand=who==='player'?player:opponent; hand.splice(hand.indexOf(card),1); discard.push(card);chosenSuit=null;render(); if(winner(hand,who==='player'?'You':'Amaka'))return; if(card.suit==='whot'&&who==='player'){chooseSuit();return;} if(card.suit==='whot'&&who==='opponent'){chosenSuit=Object.keys(suits)[Math.floor(Math.random()*4)];say(`Amaka called ${chosenSuit}!`)} turn=effects(card,who); render(); if(turn==='player'){setStatus('Your turn — play a matching card',true)}else{setStatus('Amaka is thinking…');setTimeout(botTurn,750)} }
+    function chooseSuit(){ locked=true;showModal(`<h2>You played WHOT!</h2><p>Call the next shape.</p><div class="shapes">${Object.entries(suits).map(([k,v])=>`<button class="shape-choice ${v[1]}" onclick="pickSuit('${k}')">${v[0]}</button>`).join('')}</div>`)}
+    function pickSuit(s){chosenSuit=s;locked=false;closeModal();say(`You called ${s}!`);turn='opponent';setStatus('Amaka is thinking…');render();setTimeout(botTurn,700)}
+    function botTurn(){ if(locked||turn!=='opponent')return; const choices=opponent.filter(canPlay); if(!choices.length){draw(opponent);say('Amaka picked from the market.');turn='player';setStatus('Your turn — play a matching card',true);render();return;} play(choices[Math.floor(Math.random()*choices.length)],'opponent'); }
+    function closeModal(){$('#modal').hidden=true}
+    $('#hand').onclick=e=>{const el=e.target.closest('[data-id]');if(!el||turn!=='player'||locked)return;const c=player.find(x=>x.id===+el.dataset.id);if(canPlay(c))play(c,'player');else say('Match the number or shape — or play WHOT!');};
+    $('#drawPile').onclick=()=>{if(turn!=='player'||locked)return;draw(player);say('You picked a card.');turn='opponent';setStatus('Amaka is thinking…');render();setTimeout(botTurn,650)};
+    $('#newGame').onclick=newGame;$('#rulesBtn').onclick=()=>showModal(`<h2>How to play</h2><p>Match the <b>number</b> or <b>shape</b> on the last card. A WHOT card lets you call any shape. First player with no cards wins.</p><p><b>Specials:</b> 1 = play again · 2 = pick two · 5 = pick three · 8 = skip · 14 = everyone picks one.</p><button class="close" onclick="closeModal()">Got it</button>`);function showModal(html){$('#modalContent').innerHTML=html;$('#modal').hidden=false} window.pickSuit=pickSuit;window.closeModal=closeModal;newGame();
+  </script>
+</body>
+</html>

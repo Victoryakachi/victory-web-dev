@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Box {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: hsl(185, 75%, 39%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.Box1 {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 50px 100px -20px rgba(8, 70, 94, 0.5);
+}
+
+.Box1a {
+  /* background-image: url('https://i.imgur.com/8Km1L5z.png'); */
+  
+  height: 140px;
+  width: 100%;
+}
+
+.Box1b {
+  
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 5px solid hsl(0, 0%, 100%);
+  margin-top: -48px;
+  margin-bottom: 20px;
+}
+
+.Box1c {
+  margin-bottom: 24px;
+}
+
+.Box1d {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+  margin-bottom: 8px;
+}
+
+.Box1e {
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+}
+
+.Box1f {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+}
+
+.Box1g {
+  height: 1px;
+  background-color: hsl(225, 10%, 92%);
+  margin-bottom: 24px;
+}
+
+.Box1h {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 40px 24px 40px;
+}
+
+.Box1i {
+  display: flex;
+  flex-direction: column;
+}
+
+.Box1j {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+  margin-bottom: 4px;
+}
+
+.Box1k {
+  font-size: 10px;
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+  letter-spacing: 1.5px;
+}

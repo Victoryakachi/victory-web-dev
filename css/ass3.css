@@ -1,0 +1,94 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    background: #E6EFF6;
+    font-family: "Arial", sans-serif;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    height: 100vh;          
+    padding: 20px;
+  }
+  .box { 
+    max-width: 635px;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .box1 {
+    background: #fff;
+    padding: 40px;
+  }
+  .box1 h2 {
+    color: #2BB3B1;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .box1 .para {
+    color: #C0DF34;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .box1 p {
+    color: #98A6BD;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .box2{
+    display: flex;
+  }
+  .box2a, .box2b {
+    width: 50%;
+    padding: 40px;
+    color: #fff;
+  }
+  .box2a {
+    background: #2BB3B1;
+  }
+  .box2b {
+    background: #4ABEBD;
+  }
+  .box2a h3, .box2b h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .amount {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .month {
+    opacity: 0.6;
+  }
+  .box2a p {
+    margin-bottom: 26px;
+    opacity: 0.9;
+  }
+  .btn {
+    background: #C0DF34;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .box2b ul {
+    list-style: none;
+    line-height: 1.5;
+    opacity: 0.8;
+    font-size: 14px;
+  }
+  .box2b li {
+    margin-bottom: 4px;
+  }

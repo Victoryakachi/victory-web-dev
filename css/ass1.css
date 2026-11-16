@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: url(bg-intro-desktop.png);
+    width: 100%;
+    height: 100vh;
+    background-color: #ff5757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1{
+    width: 100%;
+    height: 515px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue; 
+    margin-left: 70px;
+}
+.box1 h1{
+    font-size: 40px;
+}
+.first{
+    width: 60%;
+    line-height: 1.2;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.second, .third{
+    width: 70%;
+    margin-left: 43px;
+}
+.box2{
+    width: 100%;
+    height: 515px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 70px;
+}
+.purple{
+    height: 7vh;
+    background-color: purple;
+    border-radius: 5px;
+}
+.whitearea{
+    background-color: white;
+    padding: 40px;
+    border-radius: 7px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+form input{
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  font-size: 14px;
+}
+form button {
+  padding: 12px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+form button:hover{
+    background-color: rgb(62, 196, 62);
+}

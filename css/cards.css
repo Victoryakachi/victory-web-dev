@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2,1fr);
+    box-shadow: 40px 60px 50px -47px black;
+}
+.daniel{
+    background-color: purple;
+    grid-column: span 2;
+}
+.jonathan{
+    background-color: rgb(68, 67, 67);
+}
+.kira{
+    grid-row: span 2;
+}
+.jean{
+
+}
+.patrick{
+
+}

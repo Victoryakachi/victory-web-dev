@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Box {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.Box1 {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+  padding: 24px;
+  width: 350px;
+  box-shadow: 0 20px 25px 15px rgba(0, 0, 0, 0.05), 
+              0 40px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Box1a {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.Box1b {
+  font-size: 22px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 16px;
+}
+
+.Box1c {
+  font-size: 18px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.Box1d {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.Box1e {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(178, 100%, 50%);
+}
+
+.Box1f {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.Box1g {
+  height: 1px;
+  background-color: hsl(215, 32%, 27%);
+  margin-bottom: 16px;
+}
+
+.Box1h {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Box1i {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.Box1j {
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.Box1k {
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+}

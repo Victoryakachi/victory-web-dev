@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="responsiveness.css">
+    <!-- flexible layout, viewport, media query -->
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" class="logo">
+                <img src="media/image-photography.jpg" alt="">
+            </a>
+            <div class="paragraph" id="paragraph">
+                <p>services</p>
+                <p>projects</p>
+                <p>about</p>
+            </div>
+
+            <!-- <button class="menu-button" id="menu_button">
+                <i class="bi bi-list"></i>
+            </button> -->
+            
+            <div class="btn-contact"><button>contact</button></div>
+            <button class="mobileIcon" id="menu_button" type="button"
+                    aria-label="Open navigation" aria-expanded="false"
+                    aria-controls="paragraph">
+                <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="nitro">
+            <h2>list of items</h2>
+        </div>
+        <div class="hero">
+            <div class="hero-items"></div>
+            <div class="hero-items"></div>
+            <div class="hero-items"></div>
+            <div class="hero-items"></div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-items"></div>
+            <div class="grid-items"></div>
+            <div class="grid-items"></div>
+            <div class="grid-items"></div>
+        </div>
+    </div>
+
+    <script>
+        const menu_button = document.getElementById("menu_button")
+        const paragraph = document.getElementById("paragraph")
+        const menu_icon = menu_button.querySelector("i")
+
+        menu_button.addEventListener("click", function () {
+            const isExpanded = menu_button.getAttribute("aria-expanded") === "true"
+            paragraph.classList.toggle("active", !isExpanded)
+            menu_button.setAttribute("aria-expanded", String(!isExpanded))
+            menu_button.setAttribute(
+                "aria-label",
+                isExpanded ? "Open navigation" : "Close navigation"
+            )
+            menu_icon.classList.toggle("bi-list", isExpanded)
+            menu_icon.classList.toggle("bi-x-lg", !isExpanded)
+        })
+    </script>
+</body>
+</html>

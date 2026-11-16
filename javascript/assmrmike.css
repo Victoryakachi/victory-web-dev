@@ -1,0 +1,50 @@
+.std_head{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(94, 80, 80); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.std_body{
+    padding: 20px;
+    width: 35%;
+    height: 60vh;
+    background-color: purple;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px
+
+}
+.input_fields{
+    background-color: violet;
+    width: 90%;
+    height: 20%;
+    gap: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.maths_input{
+    width: 28%;
+    height: 35%;
+    font-size: 15px;
+}
+.calculate_button{
+    /* text-transform: capitalize; */
+    width: 15%;
+    height: 35%;
+    font-size: 20px;
+}
+.student_data{
+    font-size: 20px;
+}
+#result{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+#maths_score{
+    font-size: 20px;
+}

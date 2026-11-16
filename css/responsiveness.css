@@ -1,0 +1,118 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 30px;
+    height: 400vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+}
+.navbar{
+    height: 90px;
+    padding: 20px;
+    background-color: brown;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.paragraph{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 30px;
+    right: 550px;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    position: absolute;
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+button{
+    height: 30px;
+    width: 70px;
+    border-radius: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+}
+.mobileIcon{
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: white;
+    z-index: 1;
+}
+.mobileIcon > i{
+    color:white;
+    font-size: 30px;
+}
+.nitro{
+    text-transform: uppercase;
+    font-size: 70px;
+    padding: 30px;
+    display: grid;
+    place-items: center;
+    color: violet;
+}
+.hero{
+    background-color: transparent;
+    margin-top: 80px;
+    height: 300px;
+    display: flex;
+    gap: 50px;
+}
+.hero-items{
+    background-color: aqua;
+    width: 100%;
+    border: 1px solid black;
+}
+@media  (max-width: 990px){
+    .mobileIcon{
+        display: block;
+
+    }
+    .container{
+        background-color: aquamarine;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+    }
+    .hero-items{
+        background-color: white;
+        height: 900px;
+    }
+    .paragraph{
+        display: none;
+        top: 75px;
+        right: 20px;
+        flex-direction: column;
+        padding: 20px;
+        background-color: brown;
+        border-radius: 12px;
+        z-index: 1;
+    }
+    .mobileIcon{
+        display: block;
+        right: 120px;
+    }
+    .paragraph.active{
+        display: flex;
+    }
+}

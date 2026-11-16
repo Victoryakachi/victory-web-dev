@@ -1,0 +1,2 @@
+align items affects element vertically
+justify content affects element horizontally

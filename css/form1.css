@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+}
+.form{
+    background-color: grey;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.whitearea{
+    background-color: white;
+    width: 45%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 4px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.whitearea h2 {
+  margin: 2px 0 10px 0;
+  font-size: 24px;
+  color: black;
+  font-family: serif;
+}
+.whitearea p{
+  margin: 5px 0 10px 0;
+  color: grey;
+  font-size: 14px;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  margin: -4px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  font-size: 14px;
+}
+/* .form textarea{
+    height: 100%;
+} */
+.form button {
+  width: 100%;
+  padding: 12px;
+  background: grey;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.form button:hover {
+  background: indigo;
+}
